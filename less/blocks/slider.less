@@ -1,0 +1,51 @@
+.slider {
+  width: 100%;
+  height: 450px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  position: relative;
+  .active {
+    z-index: 300;
+    opacity: 1;
+    transform: rotateY(0);
+  }
+  li {
+    z-index: 100;
+    position: relative;
+    transform: rotateY(90deg);
+    opacity: 0;
+    transition: 2s;
+
+  }
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__btn {
+    background-size: 50%;
+    width: 10%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 500;
+    opacity: 0.3;
+    transition: 0.3s;
+    &:hover{
+      opacity: 1;
+    }
+    &--prev{
+      background: rgba(0,0,0,0.5) url("../img/prev.png") no-repeat center center;
+      left: 0;
+    }
+    &--next{
+      background: rgba(0,0,0,0.5) url("../img/next.png") no-repeat center center;
+      right: 0;
+    }
+  }
+
+}
+
